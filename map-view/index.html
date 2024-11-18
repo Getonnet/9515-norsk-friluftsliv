@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-55WJ2DRR"
+    ></script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-55WJ2DRR");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- PNG format -->
+    <link
+      rel="icon"
+      href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/android-chrome-512x512.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/apple-touch-icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon-32x32.png"
+      type="image/png"
+    />
+
+    <!-- Standard favicon -->
+    <link
+      rel="icon"
+      href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <title>Activity calendar - Outdoor life week</title>
+
+    <!-- SVGInject -->
+
+    <!-- swiper JS -->
+
+    <!-- Compiled CSS (Global style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Placeholder links for serif font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z2RX380J5G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z2RX380J5G");
+    </script>
+
+    <link
+      href="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.css?v=1730816190"
+      rel="stylesheet"
+    />
+    <link
+      href="https://friluftslivetsuke.no/dist/css/styles.min.css?v=1730816189"
+      rel="stylesheet"
+    />
+    <link
+      href="https://friluftslivetsuke.no/dist/css/modules/main-header.css?v=1730816189"
+      rel="stylesheet"
+    />
+    <link
+      href="https://friluftslivetsuke.no/dist/css/modules/breadcrumbs.css?v=1730816189"
+      rel="stylesheet"
+    />
+    <script src="https://friluftslivetsuke.no/dist/libs/@iconfu/svg-inject/dist/svg-inject.min.js?v=1730816190"></script>
+    <script src="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.js?v=1730816190"></script>
+    <style>
+      .htmx-indicator {
+        opacity: 0;
+      }
+      .htmx-request .htmx-indicator {
+        opacity: 1;
+        transition: opacity 200ms ease-in;
+      }
+      .htmx-request.htmx-indicator {
+        opacity: 1;
+        transition: opacity 200ms ease-in;
+      }
+    </style>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      charset="UTF-8"
+      href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.26tY-h6gH9w.L.W.O/am=GAw/d=0/rs=AN8SPfoV6mMC6tlFnBTPsgfPv12vhvDMnA/m=el_main_css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700"
+      rel="stylesheet"
+    />
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- .caleran includes -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.js"></script>
+
+    <!-- .end caleran includes -->
+    <style type="text/css">
+      @font-face {
+        font-weight: 400;
+        font-style: normal;
+        font-family: circular;
+
+        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 700;
+        font-style: normal;
+        font-family: circular;
+
+        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2")
+          format("woff2");
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main_container">
+    <div class="topbar">
+      <div class="topbar_side_left">
+        <img src="/public/logo.svg" width="140" height="70" alt="Icon" />
+      </div>
+      <div class="topbar_side_right">
+        <div class="topbar_input_box_container">
+          <label for="topbar_search_box">Søk på arrangement</label>
+          <input
+            type="text"
+            name="topbar_search_box"
+            id="topbar_search_box"
+            placeholder="Hele norge båler"
+          />
+        </div>
+        <div class="topbar_input_box_container">
+          <label for="county_select">Velg fylke</label>
+          <div class="custom_select_wrapper">
+            <select id="county_select">
+              <option>All</option>
+              <option>County 1</option>
+              <option>County 2</option>
+              <option>County 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="topbar_input_box_container">
+          <label for="county_select">Velg kommune</label>
+          <div class="custom_select_wrapper">
+            <select id="county_select">
+              <option>All</option>
+              <option>County 1</option>
+              <option>County 2</option>
+              <option>County 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="topbar_input_box_container">
+          <label for="date_select">Dato</label>
+          <div class="custom_date_wrapper">
+            <input type="date" />
+          </div>
+        </div>
+        <div>
+          <button class="top_search_btn">
+            Søk
+            <img src="/public/search.svg" width="24" height="24" alt="Icon" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="divider_area_container">
+      <div class="divider_area_left">
+        <div class="divider_area_filter_section">
+          <div class="divider_area_filter_section_text">
+            Viser <span>23</span> aktiviteter
+          </div>
+        </div>
+
+        <!-- left side -->
+        <div class="divider_area_left_grid">
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_container">
+            <div class="card_container_img_area">
+              <div class="card_container_inner_img_area">
+                <img src="../public/image 27.png" alt="" />
+              </div>
+              <div class="card_container_inner_img_area_icon">
+                <img
+                  src="../public/arrow.svg"
+                  alt=""
+                  height="17.33"
+                  width="17.33"
+                />
+              </div>
+            </div>
+            <div class="card_container_text_area">
+              <div class="card_conatiner_title">BC Uskedalen</div>
+              <div class="card_conatiner_desc card_conatiner_desc_one">
+                <div>
+                  <img
+                    src="../public/location.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">Uskedalen</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img
+                    src="../public/calender.svg"
+                    alt=""
+                    height="16"
+                    width="16"
+                  />
+                </div>
+                <div class="card_conatiner_text">18. jan. 2025</div>
+              </div>
+              <div class="card_conatiner_desc">
+                <div>
+                  <img src="../public/time.svg" alt="" height="16" width="16" />
+                </div>
+                <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider_area_right">
+        <div id="map"></div>
+      </div>
+    </div>
+  </body>
+  <!-- Initialize Google Maps -->
+  <script>
+    function initMap() {
+      const center = { lat: 60.1699, lng: 24.9384 };
+
+      // Create the map
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 6,
+        center: center,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      });
+
+      // Location data with card details
+      const locations = [
+        {
+          lat: 60.1699,
+          lng: 24.9384,
+          title: "Panorama Stølsheimen",
+          image: "../public/image 27.png",
+        },
+        {
+          lat: 59.3293,
+          lng: 18.0686,
+          title: "Panorama Stølsheimen",
+          image: "../public/image 27.png",
+        },
+        {
+          lat: 58.9699,
+          lng: 5.7331,
+          title: "Panorama Stølsheimen",
+          image: "../public/image 27.png",
+        },
+        {
+          lat: 61.9241,
+          lng: 25.7482,
+          title: "Panorama Stølsheimen",
+          image: "../public/image 27.png",
+        },
+        {
+          lat: 60.4518,
+          lng: 22.2666,
+          title: "Panorama Stølsheimen",
+          image: "../public/image 27.png",
+        },
+      ];
+
+      // Create a div for the card
+      const card = document.createElement("div");
+      card.style.position = "absolute";
+      card.style.background = "white";
+      card.style.boxShadow = "6px 6px 0px 0px #003f57";
+      card.style.border = "2px solid #082f42";
+      card.style.display = "none";
+      card.style.zIndex = "1000";
+      card.style.borderRadius = "12px";
+      card.style.transition = "opacity 0.2s";
+      card.style.width = "300px";
+      card.id = "markerCard";
+      document.body.appendChild(card);
+
+      let activeMarker = null; // Track the currently active marker
+
+      // Add markers with hover and click events
+      locations.forEach((location, index) => {
+        const marker = new google.maps.Marker({
+          position: { lat: location.lat, lng: location.lng },
+          map: map,
+        });
+
+        // Helper function to render the card content
+        const renderCardContent = () => `
+        <div style="position:relative;" class="hover_card_container">
+          <div class="hover_card_container_img_area">
+            <div class="card_container_inner_img_area">
+              <img src="${location.image}" alt="" />
+            </div>
+          </div>
+          <div class="card_container_text_area">
+            <div class="card_conatiner_title">${location.title}</div>
+            <div class="card_conatiner_desc card_conatiner_desc_one">
+              <div>
+                <img
+                  src="../public/location.svg"
+                  alt=""
+                  height="16"
+                  width="16"
+                />
+              </div>
+              <div class="card_conatiner_text">Location ${index + 1}</div>
+            </div>
+            <div class="card_conatiner_desc">
+              <div>
+                <img
+                  src="../public/calender.svg"
+                  alt=""
+                  height="16"
+                  width="16"
+                />
+              </div>
+              <div class="card_conatiner_text">18. Jan. 2025</div>
+            </div>
+            <div class="card_conatiner_desc">
+              <div>
+                <img src="../public/time.svg" alt="" height="16" width="16" />
+              </div>
+              <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+            </div>
+          </div>
+          <button
+          id="cancelButton"
+          style="
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #E5F7FFE5;
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            margin: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 1.89px 1.89px 0px #00000040;
+          "
+        >
+          <img
+            src="../public/cross.svg"
+            alt=""
+            height="16"
+            width="16"
+            color="white"
+          />
+        </button>
+        </div>
+      `;
+
+        // Mouseover event
+        marker.addListener("mouseover", () => {
+          if (activeMarker !== marker) {
+            card.innerHTML = renderCardContent();
+            card.style.left = event.pageX + 10 + "px";
+            card.style.top = event.pageY + 10 + "px";
+            card.style.display = "block";
+          }
+        });
+
+        // Mouseout event
+        marker.addListener("mouseout", () => {
+          if (activeMarker !== marker) {
+            card.style.display = "none";
+          }
+        });
+
+        // Click event to toggle the card
+        marker.addListener("click", () => {
+          if (activeMarker === marker) {
+            activeMarker = null; // Deselect the marker
+            card.style.display = "none";
+          } else {
+            activeMarker = marker; // Set this marker as active
+            card.innerHTML = renderCardContent();
+            card.style.left = event.pageX + 10 + "px";
+            card.style.top = event.pageY + 10 + "px";
+            card.style.display = "block";
+
+            // Add click listener for the cancel button
+            const cancelButton = document.getElementById("cancelButton");
+            cancelButton.addEventListener("click", () => {
+              activeMarker = null;
+              card.style.display = "none";
+            });
+          }
+        });
+
+        // Update card position on mousemove
+        marker.addListener("mousemove", (event) => {
+          if (card.style.display === "block") {
+            card.style.left = event.domEvent.pageX + 10 + "px";
+            card.style.top = event.domEvent.pageY + 10 + "px";
+          }
+        });
+      });
+    }
+
+    // Error handling if Google Maps fails to load
+    window.gm_authFailure = function () {
+      alert("Google Maps failed to load. Check API key or permissions.");
+    };
+  </script>
+
+  <!-- Google Maps API script with callback -->
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0ghk_XYpSJ-Nw-eCeOvuM1_iIPY-6h0M&callback=initMap&onerror=gm_authFailure"
+  ></script>
+</html>
