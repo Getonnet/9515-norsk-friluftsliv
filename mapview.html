@@ -79,8 +79,9 @@
         src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2") format("woff2");
       }
     </style>
+
+    <!--New stylesheet:Getonnet-->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/map-view.css" />
   </head>
 
   <body class="main_container">
@@ -91,15 +92,15 @@
         <img src="./images/logo.svg" width="140" height="70" alt="Icon" />
       </div>
 
-      <div class="filter">
+      <form method="get" class="filter">
         <!-- search box -->
-        <div class="filter_input_box_container">
+        <div class="filter_input">
           <label for="filter_search_box">Søk på arrangement</label>
           <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
         </div>
 
         <!-- dropdown -->
-        <div class="filter_input_box_container">
+        <div class="filter_input">
           <label for="county_select">Velg fylke</label>
           <div class="custom_select_wrapper">
             <select id="county_select">
@@ -112,7 +113,7 @@
         </div>
 
         <!-- dropdown -->
-        <div class="filter_input_box_container">
+        <div class="filter_input">
           <label for="county_select_two">Velg kommune</label>
           <div class="custom_select_wrapper">
             <select id="county_select_two">
@@ -125,9 +126,9 @@
         </div>
 
         <!-- calender range selector -->
-        <div class="filter_input_box_container">
+        <div class="filter_input">
           <label for="date_select">Dato</label>
-          <div onclick="myFunction()" class="custom_date_wrapper">
+          <div onclick="toggleContainerVisibility()" class="custom_date_wrapper">
             <input type="date" id="date_select" />
           </div>
           <div id="container" class="container" style="display: none">
@@ -163,7 +164,7 @@
             </svg>
           </button>
         </div>
-      </div>
+      </form>
     </header>
 
     <!-- Card and Map area -->

@@ -1,6 +1,6 @@
 // calender container
 // Function to toggle the container visibility
-function myFunction() {
+function toggleContainerVisibility() {
   const container = document.getElementById("container");
   if (container.style.display === "none" || container.style.display === "") {
     container.style.display = "block";
@@ -55,9 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(dates); // Debug log for passed dates
 
     // Ensure the `dates` are in ISO string format without time
-    const formattedDates = dates.map(
-      (date) => date.toISOString().split("T")[0]
-    );
+    const formattedDates = dates.map((date) => date.toISOString().split("T")[0]);
 
     // Update the calendar settings with new dates
     calendar.settings.selected.dates = formattedDates;
@@ -83,9 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   thisWeekendBtn.addEventListener("click", () => {
     const today = new Date();
-    const saturday = new Date(
-      today.setDate(today.getDate() + (6 - today.getDay()))
-    );
+    const saturday = new Date(today.setDate(today.getDate() + (6 - today.getDay())));
     const sunday = new Date(saturday);
     sunday.setDate(saturday.getDate() + 1);
     updateCalendarSelection([saturday, sunday]);
@@ -93,18 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   nextWeekBtn.addEventListener("click", () => {
     const today = new Date();
-    const startOfNextWeek = new Date(
-      today.setDate(today.getDate() + (7 - today.getDay()))
-    );
+    const startOfNextWeek = new Date(today.setDate(today.getDate() + (7 - today.getDay())));
     const endOfNextWeek = new Date(startOfNextWeek);
     endOfNextWeek.setDate(startOfNextWeek.getDate() + 6);
 
     const dates = [];
-    for (
-      let d = new Date(startOfNextWeek);
-      d <= endOfNextWeek;
-      d.setDate(d.getDate() + 1)
-    ) {
+    for (let d = new Date(startOfNextWeek); d <= endOfNextWeek; d.setDate(d.getDate() + 1)) {
       dates.push(new Date(d));
     }
     updateCalendarSelection(dates);
@@ -116,11 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 
     const dates = [];
-    for (
-      let d = new Date(startOfMonth);
-      d <= endOfMonth;
-      d.setDate(d.getDate() + 1)
-    ) {
+    for (let d = new Date(startOfMonth); d <= endOfMonth; d.setDate(d.getDate() + 1)) {
       dates.push(new Date(d));
     }
     updateCalendarSelection(dates);
