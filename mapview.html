@@ -69,34 +69,37 @@
         font-weight: 400;
         font-style: normal;
         font-family: circular;
-        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2") format("woff2");
+        src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2") format("woff2");
       }
 
       @font-face {
         font-weight: 700;
         font-style: normal;
         font-family: circular;
-        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2") format("woff2");
+        src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2") format("woff2");
       }
     </style>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/map-view.css" />
   </head>
+
   <body class="main_container">
     <!-- Topbar -->
-    <div class="topbar">
+    <header class="header-map-view">
       <!-- logo -->
-      <div class="topbar_side_left">
+      <div>
         <img src="./images/logo.svg" width="140" height="70" alt="Icon" />
       </div>
-      <div class="topbar_side_right">
+
+      <div class="filter">
         <!-- search box -->
-        <div class="topbar_input_box_container">
-          <label for="topbar_search_box">Søk på arrangement</label>
-          <input type="text" name="topbar_search_box" id="topbar_search_box" placeholder="Hele norge båler" />
+        <div class="filter_input_box_container">
+          <label for="filter_search_box">Søk på arrangement</label>
+          <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
         </div>
+
         <!-- dropdown -->
-        <div class="topbar_input_box_container">
+        <div class="filter_input_box_container">
           <label for="county_select">Velg fylke</label>
           <div class="custom_select_wrapper">
             <select id="county_select">
@@ -107,8 +110,9 @@
             </select>
           </div>
         </div>
+
         <!-- dropdown -->
-        <div class="topbar_input_box_container">
+        <div class="filter_input_box_container">
           <label for="county_select_two">Velg kommune</label>
           <div class="custom_select_wrapper">
             <select id="county_select_two">
@@ -119,11 +123,12 @@
             </select>
           </div>
         </div>
-        <!-- calender -->
-        <div class="topbar_input_box_container">
+
+        <!-- calender range selector -->
+        <div class="filter_input_box_container">
           <label for="date_select">Dato</label>
           <div onclick="myFunction()" class="custom_date_wrapper">
-            <input type="date" />
+            <input type="date" id="date_select" />
           </div>
           <div id="container" class="container" style="display: none">
             <div class="container_top">
@@ -147,6 +152,7 @@
             </div>
           </div>
         </div>
+
         <!-- search button -->
         <div>
           <button class="top_search_btn">
@@ -158,7 +164,8 @@
           </button>
         </div>
       </div>
-    </div>
+    </header>
+
     <!-- Card and Map area -->
     <div class="divider_area_container">
       <!-- Card area -->
