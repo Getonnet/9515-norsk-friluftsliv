@@ -66,7 +66,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 66px;
 }
 .calendar-button-container {
   position: relative;
@@ -78,7 +78,7 @@
   font-weight: 500;
 }
 
-.calendar-dropdown-button {
+.layout-switcher {
   background-color: white;
   border: 2px solid #0c2942;
   padding: 16px 40px;
@@ -91,12 +91,12 @@
   transition: all 0.2s ease;
 }
 
-.calendar-dropdown-button:hover {
+.layout-switcher:hover {
   transform: translateY(2px);
   box-shadow: 0 6px 0 #0c2942;
 }
 
-.calendar-dropdown-button.active {
+.layout-switcher.active {
   transform: translateY(6px);
   box-shadow: 0 2px 0 #0c2942;
 }
@@ -325,14 +325,14 @@
     display: none;
   }
   .calendar-showing-result-wrapper {
-    padding-top: 34px;
+    padding-top: 40px;
   }
   .calender_button_wrapper {
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 24px;
   }
-  .calendar-dropdown-button {
+  .layout-switcher {
     padding: 16px 28px;
     font-size: 16px;
   }
@@ -354,8 +354,9 @@
   gap: 16px;
   align-items: flex-end;
   max-width: 100%;
-  overflow: hidden;
+  padding-top: 80px;
 }
+
 /* input box */
 .filter_input {
   display: flex;
@@ -364,6 +365,7 @@
 }
 .filter_input--search {
   flex: 1;
+  min-width: 200px;
 }
 .filter_input label {
   font-size: 16px;
@@ -392,7 +394,16 @@
   font-size: 16px;
   font-weight: 500;
 }
-
+@media screen and (max-width: 1120px) {
+  .filter {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .filter_input {
+    min-width: 100%;
+  }
+}
 /* select box */
 .custom_select_wrapper {
   position: relative;
@@ -443,6 +454,7 @@
   background-size: contain;
   pointer-events: none;
 }
+
 /* date */
 .custom_date_wrapper {
   position: relative;
@@ -499,6 +511,14 @@
 
 .custom_date_wrapper input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .custom_select_wrapper,
+  .custom_date_wrapper,
+  .custom_date_wrapper {
+    width: 100%;
+  }
 }
 
 /* date calender container */

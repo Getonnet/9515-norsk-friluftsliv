@@ -1,4 +1,3 @@
-// calender container
 // Function to toggle the container visibility
 function toggleContainerVisibility() {
   const container = document.getElementById("container");

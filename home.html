@@ -29,40 +29,17 @@
     <link href="https://friluftslivetsuke.no/dist/css/modules/breadcrumbs.css?v=1730816189" rel="stylesheet" />
     <script src="https://friluftslivetsuke.no/dist/libs/@iconfu/svg-inject/dist/svg-inject.min.js?v=1730816190"></script>
     <script src="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.js?v=1730816190"></script>
-    <style>
-      .htmx-indicator {
-        opacity: 0;
-      }
-      .htmx-request .htmx-indicator {
-        opacity: 1;
-        transition: opacity 200ms ease-in;
-      }
-      .htmx-request.htmx-indicator {
-        opacity: 1;
-        transition: opacity 200ms ease-in;
-      }
-    </style>
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.26tY-h6gH9w.L.W.O/am=GAw/d=0/rs=AN8SPfoV6mMC6tlFnBTPsgfPv12vhvDMnA/m=el_main_css" />
-    <style type="text/css">
-      @font-face {
-        font-weight: 400;
-        font-style: normal;
-        font-family: circular;
-        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2") format("woff2");
-      }
-      @font-face {
-        font-weight: 700;
-        font-style: normal;
-        font-family: circular;
-        src: url("chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2") format("woff2");
-      }
-    </style>
 
     <!--New stylesheet:Getonnet-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
+    <!-- Spacer: placeholder header -->
+    <div style="height: 200px" class="is-bg-pastel-pink"></div>
+    <!-- // Spacer -->
+
     <div class="is-bg-pastel-pink">
       <div class="grid-container">
         <div class="grid-row">
@@ -192,7 +169,7 @@
         <div class="calendar-showing-result-wrapper">
           <p class="calendar-showing-result">Viser <span class="is-text-bold">78</span> aktiviteter</p>
           <div class="calendar-button-container">
-            <button class="calendar-dropdown-button" onclick="toggleDropdown()">Vis i liste</button>
+            <button class="layout-switcher">Vis i liste</button>
             <div class="calendar-dropdown" id="viewDropdown">
               <button class="calendar-dropdown-item" id="button-1" onclick="showDiv(1)">
                 <span class="calendar-dropdown-icon">
@@ -822,6 +799,13 @@
       </div>
     </div>
 
-    <script type="module" src="./js/calendar.js"></script>
+    <!-- Spacer: placeholder footer -->
+    <div style="height: 200px" class="is-bg-pastel-pink"></div>
+    <!-- // Spacer -->
+
+    <!--new scripts getonnet-->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
+    <script src="./js/layout-switcher.js"></script>
+    <script src="./js/date-range-picker.js"></script>
   </body>
 </html>
