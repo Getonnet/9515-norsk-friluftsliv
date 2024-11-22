@@ -64,8 +64,7 @@
                                         <circle cx="6" cy="6.38428" r="6" fill="#003F57" />
                                     </svg>
                                     <div class="group-list_item_text-wrapper">
-                                        <p class="is-white-space-wrap">Ser du etter faste friluftslivsaktiviteter for barn og ungdom?</p>
-                                        <a href="#" class="link-icon is-white-space-wrap" target="_blank">Se Ungfritid.no</a>
+                                        <p class="is-white-space-wrap">Ser du etter faste friluftslivsaktiviteter for barn og ungdom? <a href="#" class="link-icon is-white-space-wrap" target="_blank">Se Ungfritid.no</a></p>
                                     </div>
                                 </li>
                                 <li class="group-list-item">
@@ -128,13 +127,13 @@
                     <!-- calender range selector -->
                     <div class="filter_input">
                         <label for="date_select">Dato</label>
-                        <div onclick="toggleContainerVisibility()" class="custom_date_wrapper">
+                        <div class="custom_date_wrapper" id="date_select-trigger">
                             <input type="date" id="date_select" />
                         </div>
-                        <div id="datepicker" class="datepicker" style="display: none">
+                        <div id="datepicker" class="datepicker">
                             <div class="datepicker_top">
                                 <div class="datepicker_title">Dato</div>
-                                <div class="close" onclick="closeContainer(event)">
+                                <div class="close" id="close-datepicker">
                                     <img src="./images/cross.svg" alt="Close" />
                                 </div>
                             </div>
@@ -149,7 +148,7 @@
                                     <button class="datepicker_footer_btn" id="nextWeekBtn">Neste uke</button>
                                     <button class="datepicker_footer_btn" id="thisMonthBtn">Denne måned</button>
                                 </div>
-                                <button class="container_footer_btn_last">Vis</button>
+                                <button class="datepicker_footer_btn_last">Vis</button>
                             </div>
                         </div>
                     </div>
@@ -640,7 +639,7 @@
                             </div>
                             <div class="calendar-table-card">
                                 <div class="calendar-table-card-image-wrapper">
-                                    <img src="/card-image.png" alt="card image" class="calendar-table-card-image" />
+                                    <img src="/images/card-image.png" alt="card image" class="calendar-table-card-image" />
                                 </div>
                                 <div class="calendar-table-card-content">
                                     <h2 class="calendar-table-card-title">Her er det plass til en tittel som kan være to linjer</h2>
@@ -669,7 +668,7 @@
                             </div>
                             <div class="calendar-table-card">
                                 <div class="calendar-table-card-image-wrapper">
-                                    <img src="/card-image.png" alt="card image" class="calendar-table-card-image" />
+                                    <img src="/images/card-image.png" alt="card image" class="calendar-table-card-image" />
                                 </div>
                                 <div class="calendar-table-card-content">
                                     <h2 class="calendar-table-card-title">Her er det plass til en tittel som kan være to linjer</h2>
@@ -698,7 +697,7 @@
                             </div>
                             <div class="calendar-table-card">
                                 <div class="calendar-table-card-image-wrapper">
-                                    <img src="/card-image.png" alt="card image" class="calendar-table-card-image" />
+                                    <img src="/images/card-image.png" alt="card image" class="calendar-table-card-image" />
                                 </div>
                                 <div class="calendar-table-card-content">
                                     <h2 class="calendar-table-card-title">Her er det plass til en tittel som kan være to linjer</h2>
@@ -727,7 +726,7 @@
                             </div>
                             <div class="calendar-table-card">
                                 <div class="calendar-table-card-image-wrapper">
-                                    <img src="/card-image.png" alt="card image" class="calendar-table-card-image" />
+                                    <img src="/images/card-image.png" alt="card image" class="calendar-table-card-image" />
                                 </div>
                                 <div class="calendar-table-card-content">
                                     <h2 class="calendar-table-card-title">Her er det plass til en tittel som kan være to linjer</h2>
@@ -756,7 +755,7 @@
                             </div>
                             <div class="calendar-table-card">
                                 <div class="calendar-table-card-image-wrapper">
-                                    <img src="/card-image.png" alt="card image" class="calendar-table-card-image" />
+                                    <img src="/images/card-image.png" alt="card image" class="calendar-table-card-image" />
                                 </div>
                                 <div class="calendar-table-card-content">
                                     <h2 class="calendar-table-card-title">Her er det plass til en tittel som kan være to linjer</h2>
@@ -804,6 +803,7 @@
         <!-- // Spacer -->
 
         <!--new scripts getonnet-->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
         <script src="./js/layout-switcher.js"></script>
         <script src="./js/date-range-picker.js"></script>

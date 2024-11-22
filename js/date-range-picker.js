@@ -1,20 +1,3 @@
-// Function to toggle the container visibility
-function toggleContainerVisibility() {
-    const container = document.getElementById("datepicker");
-    if (container.style.display === "none" || container.style.display === "") {
-        container.style.display = "block";
-    } else {
-        container.style.display = "none";
-    }
-}
-
-// Function to close the container when the close button is clicked
-function closeContainer(event) {
-    event.stopPropagation(); // Prevent triggering the parent div's onClick event
-    const container = document.getElementById("datepicker");
-    container.style.display = "none";
-}
-
 // inside calender functionality
 document.addEventListener("DOMContentLoaded", function () {
     const options = {
@@ -112,3 +95,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 document.documentElement.dataset.theme = "light";
+
+// Function to toggle the container visibility
+function toggleContainerVisibility() {
+    const trigger = document.getElementById("date_select-trigger");
+    const datePickerDropdown = document.getElementById("datepicker");
+    const closeButton = document.getElementById("close-datepicker");
+
+    const popperInstance = Popper.createPopper(trigger, datePickerDropdown, {
+        placement: "bottom-end",
+        modifiers: [
+            {
+                name: "offset",
+                options: {
+                    offset: [0, 10],
+                },
+            },
+        ],
+    });
+
+    function show() {
+        datePickerDropdown.setAttribute("data-show", "");
+        // We need to tell Popper to update the tooltip position
+        // after we show the tooltip, otherwise it will be incorrect
+        popperInstance.update();
+    }
+
+    function hide() {
+        datePickerDropdown.removeAttribute("data-show");
+    }
+
+    trigger.addEventListener("click", function () {
+        if (datePickerDropdown.getAttribute("data-show") === "") hide();
+        else show();
+    });
+
+    closeButton.addEventListener("click", hide);
+}
+// init date range picker
+toggleContainerVisibility();
+
+// Function to close the container when the close button is clicked
+function closeContainer(event) {
+    event.stopPropagation(); // Prevent triggering the parent div's onClick event
+    const container = document.getElementById("datepicker");
+    container.style.display = "none";
+}
