@@ -99,7 +99,7 @@ document.documentElement.dataset.theme = "light";
 
 // Function to toggle the container visibility
 function toggleContainerVisibility() {
-    const trigger = document.getElementById("date_select-trigger");
+    const trigger = document.getElementById("date_select");
     const datePickerDropdown = document.getElementById("datepicker");
     const closeButton = document.getElementById("close-datepicker");
 
