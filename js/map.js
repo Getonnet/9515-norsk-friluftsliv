@@ -3,57 +3,57 @@ const map = L.map("map").setView([60.1699, 24.9384], 5);
 
 // Add OpenStreetMap tiles
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution: "© OpenStreetMap contributors",
+    maxZoom: 19,
+    attribution: "© OpenStreetMap contributors"
 }).addTo(map);
 
 const customIcon = L.icon({
-  iconUrl: "../images/marker.svg",
-  iconSize: [32, 40],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
+    iconUrl: "/images/marker.svg",
+    iconSize: [32, 40],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32]
 });
 
 // Locations array
 const locations = [
-  {
-    lat: 60.1699,
-    lng: 24.9384,
-    title: "Panorama Stølsheimen",
-    image: "./images/image 27.png",
-  },
-  {
-    lat: 59.3293,
-    lng: 18.0686,
-    title: "Panorama Stølsheimen",
-    image: "./images/image 27.png",
-  },
-  {
-    lat: 58.9699,
-    lng: 5.7331,
-    title: "Panorama Stølsheimen",
-    image: "./images/image 27.png",
-  },
-  {
-    lat: 61.9241,
-    lng: 25.7482,
-    title: "Panorama Stølsheimen",
-    image: "./images/image 27.png",
-  },
-  {
-    lat: 60.4518,
-    lng: 22.2666,
-    title: "Panorama Stølsheimen",
-    image: "./images/image 27.png",
-  },
+    {
+        lat: 60.1699,
+        lng: 24.9384,
+        title: "Panorama Stølsheimen",
+        image: "./images/image 27.png"
+    },
+    {
+        lat: 59.3293,
+        lng: 18.0686,
+        title: "Panorama Stølsheimen",
+        image: "./images/image 27.png"
+    },
+    {
+        lat: 58.9699,
+        lng: 5.7331,
+        title: "Panorama Stølsheimen",
+        image: "./images/image 27.png"
+    },
+    {
+        lat: 61.9241,
+        lng: 25.7482,
+        title: "Panorama Stølsheimen",
+        image: "./images/image 27.png"
+    },
+    {
+        lat: 60.4518,
+        lng: 22.2666,
+        title: "Panorama Stølsheimen",
+        image: "./images/image 27.png"
+    }
 ];
 
 // Loop through the locations and add markers
 locations.forEach((location, index) => {
-  const marker = L.marker([location.lat, location.lng], {
-    icon: customIcon,
-  }).addTo(map);
-  marker.bindPopup(`
+    const marker = L.marker([location.lat, location.lng], {
+        icon: customIcon
+    }).addTo(map);
+    marker.bindPopup(`
             <div class="hover_card_container_img_area">
                 <div class="card_container_inner_img_area">
                     <img src="${location.image}" alt="" />

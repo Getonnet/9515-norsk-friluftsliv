@@ -1,5 +1,5 @@
 // inside calender functionality
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const options = {
         type: "multiple",
         months: 2,
@@ -7,21 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
         settings: {
             range: {},
             selection: {
-                day: "multiple-ranged",
+                day: "multiple-ranged"
             },
             visibility: {
-                daysOutside: false,
-            },
+                daysOutside: false
+            }
         },
         actions: {
-            clickDay(e, self) {},
+            clickDay(e, self) {
+            }
         },
         CSSClasses: {
             calendar: "vanilla-calendar",
             arrowPrev: "vanilla-calendar-arrow_prev",
             arrowNext: "vanilla-calendar-arrow_next",
-            content: "vanilla-calendar-content",
-        },
+            content: "vanilla-calendar-content"
+        }
     };
 
     const calendar = new VanillaCalendar("#calendar", options);
@@ -108,10 +109,10 @@ function toggleContainerVisibility() {
             {
                 name: "offset",
                 options: {
-                    offset: [0, 10],
-                },
-            },
-        ],
+                    offset: [0, 10]
+                }
+            }
+        ]
     });
 
     function show() {
@@ -125,13 +126,14 @@ function toggleContainerVisibility() {
         datePickerDropdown.removeAttribute("data-show");
     }
 
-    trigger.addEventListener("click", function () {
+    trigger.addEventListener("click", function() {
         if (datePickerDropdown.getAttribute("data-show") === "") hide();
         else show();
     });
 
     closeButton.addEventListener("click", hide);
 }
+
 // init date range picker
 toggleContainerVisibility();
 
