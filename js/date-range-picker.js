@@ -1,5 +1,5 @@
 // inside calender functionality
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const options = {
         type: "multiple",
         months: 2,
@@ -7,22 +7,21 @@ document.addEventListener("DOMContentLoaded", function() {
         settings: {
             range: {},
             selection: {
-                day: "multiple-ranged"
+                day: "multiple-ranged",
             },
             visibility: {
-                daysOutside: false
-            }
+                daysOutside: false,
+            },
         },
         actions: {
-            clickDay(e, self) {
-            }
+            clickDay(e, self) {},
         },
         CSSClasses: {
             calendar: "vanilla-calendar",
             arrowPrev: "vanilla-calendar-arrow_prev",
             arrowNext: "vanilla-calendar-arrow_next",
-            content: "vanilla-calendar-content"
-        }
+            content: "vanilla-calendar-content",
+        },
     };
 
     const calendar = new VanillaCalendar("#calendar", options);
@@ -57,12 +56,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextWeekBtn = document.getElementById("nextWeekBtn");
     const thisMonthBtn = document.getElementById("thisMonthBtn");
 
-    todayBtn.addEventListener("click", () => {
+    todayBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         const today = new Date();
         updateCalendarSelection([today]);
     });
 
-    thisWeekendBtn.addEventListener("click", () => {
+    thisWeekendBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         const today = new Date();
         const saturday = new Date(today.setDate(today.getDate() + (6 - today.getDay())));
         const sunday = new Date(saturday);
@@ -70,7 +71,8 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCalendarSelection([saturday, sunday]);
     });
 
-    nextWeekBtn.addEventListener("click", () => {
+    nextWeekBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         const today = new Date();
         const startOfNextWeek = new Date(today.setDate(today.getDate() + (7 - today.getDay())));
         const endOfNextWeek = new Date(startOfNextWeek);
@@ -83,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCalendarSelection(dates);
     });
 
-    thisMonthBtn.addEventListener("click", () => {
+    thisMonthBtn.addEventListener("click", (e) => {
+        e.preventDefault();s
         const today = new Date();
         const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
         const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
@@ -109,10 +112,10 @@ function toggleContainerVisibility() {
             {
                 name: "offset",
                 options: {
-                    offset: [0, 10]
-                }
-            }
-        ]
+                    offset: [0, 10],
+                },
+            },
+        ],
     });
 
     function show() {
@@ -126,7 +129,7 @@ function toggleContainerVisibility() {
         datePickerDropdown.removeAttribute("data-show");
     }
 
-    trigger.addEventListener("click", function() {
+    trigger.addEventListener("click", function () {
         if (datePickerDropdown.getAttribute("data-show") === "") hide();
         else show();
     });

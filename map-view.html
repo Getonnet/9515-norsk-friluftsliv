@@ -1,725 +1,401 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- PNG format -->
-    <link rel="icon"
-          href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/android-chrome-192x192.png"
-          type="image/png" />
-    <link rel="icon"
-          href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/android-chrome-512x512.png"
-          type="image/png" />
-    <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/apple-touch-icon.png"
-          type="image/png" />
-    <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon-16x16.png"
-          type="image/png" />
-    <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon-32x32.png"
-          type="image/png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- PNG format -->
+        <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/android-chrome-192x192.png" type="image/png" />
+        <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/android-chrome-512x512.png" type="image/png" />
+        <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/apple-touch-icon.png" type="image/png" />
+        <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon-16x16.png" type="image/png" />
+        <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon-32x32.png" type="image/png" />
 
-    <!-- Standard favicon -->
-    <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon.ico"
-          type="image/x-icon" />
+        <!-- Standard favicon -->
+        <link rel="icon" href="https://friluftslivetsuke.no/dist/images/favicons/friluftslivetsuke/favicon.ico" type="image/x-icon" />
 
-    <title>Activity calendar - Outdoor life week</title>
+        <title>Activity calendar - Outdoor life week</title>
 
-    <!-- SVGInject -->
+        <!-- SVGInject -->
 
-    <!-- swiper JS -->
+        <!-- swiper JS -->
 
-    <!-- Compiled CSS (Global style) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-        rel="stylesheet" />
+        <!-- Compiled CSS (Global style) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet" />
 
-    <!-- Placeholder links for serif font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&amp;display=swap"
-          rel="stylesheet" />
+        <!-- Placeholder links for serif font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
 
-    <link href="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.css?v=1730816190" rel="stylesheet" />
-    <link href="https://friluftslivetsuke.no/dist/css/styles.min.css?v=1730816189" rel="stylesheet" />
-    <link href="https://friluftslivetsuke.no/dist/css/modules/main-header.css?v=1730816189" rel="stylesheet" />
-    <link href="https://friluftslivetsuke.no/dist/css/modules/breadcrumbs.css?v=1730816189" rel="stylesheet" />
-    <script
-        src="https://friluftslivetsuke.no/dist/libs/@iconfu/svg-inject/dist/svg-inject.min.js?v=1730816190"></script>
-    <script src="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.js?v=1730816190"></script>
-    <style>
-        .htmx-indicator {
-            opacity: 0;
-        }
+        <link href="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.css?v=1730816190" rel="stylesheet" />
+        <link href="https://friluftslivetsuke.no/dist/css/styles.min.css?v=1730816189" rel="stylesheet" />
+        <link href="https://friluftslivetsuke.no/dist/css/modules/main-header.css?v=1730816189" rel="stylesheet" />
+        <link href="https://friluftslivetsuke.no/dist/css/modules/breadcrumbs.css?v=1730816189" rel="stylesheet" />
+        <script src="https://friluftslivetsuke.no/dist/libs/@iconfu/svg-inject/dist/svg-inject.min.js?v=1730816190"></script>
+        <script src="https://friluftslivetsuke.no/dist/libs/swiper/swiper-bundle.min.js?v=1730816190"></script>
+        <style>
+            .htmx-indicator {
+                opacity: 0;
+            }
 
-        .htmx-request .htmx-indicator {
-            opacity: 1;
-            transition: opacity 200ms ease-in;
-        }
+            .htmx-request .htmx-indicator {
+                opacity: 1;
+                transition: opacity 200ms ease-in;
+            }
 
-        .htmx-request.htmx-indicator {
-            opacity: 1;
-            transition: opacity 200ms ease-in;
-        }
-    </style>
-    <link type="text/css" rel="stylesheet" charset="UTF-8"
-          href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.26tY-h6gH9w.L.W.O/am=GAw/d=0/rs=AN8SPfoV6mMC6tlFnBTPsgfPv12vhvDMnA/m=el_main_css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+            .htmx-request.htmx-indicator {
+                opacity: 1;
+                transition: opacity 200ms ease-in;
+            }
+        </style>
+        <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.26tY-h6gH9w.L.W.O/am=GAw/d=0/rs=AN8SPfoV6mMC6tlFnBTPsgfPv12vhvDMnA/m=el_main_css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <!-- .caleran includes -->
-    <!--<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" type="text/javascript"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.js"></script>-->
-    <!-- .end caleran includes -->
-    <!-- map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" />
+        <!-- map -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" />
 
-    <style type="text/css">
-        @font-face {
-            font-weight: 400;
-            font-style: normal;
-            font-family: circular;
-            src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2") format("woff2");
-        }
+        <style type="text/css">
+            @font-face {
+                font-weight: 400;
+                font-style: normal;
+                font-family: circular;
+                src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2") format("woff2");
+            }
 
-        @font-face {
-            font-weight: 700;
-            font-style: normal;
-            font-family: circular;
-            src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2") format("woff2");
-        }
-    </style>
+            @font-face {
+                font-weight: 700;
+                font-style: normal;
+                font-family: circular;
+                src: url("liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2") format("woff2");
+            }
+        </style>
 
-    <!--New stylesheet:Getonnet-->
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
+        <!--New stylesheet:Getonnet-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
 
-<body class="main_container">
-<!-- Sidebar filter -->
-<div class="sidebar">
-    <div class="sidebar_hearder">
-        <div>Filter</div>
-        <div>
-            <button class="close_btn">
-                <img src="./images/sidebarCross.svg" alt="">
-            </button>
-        </div>
-    </div>
-    <form method="get" class="sidebar_filter">
-        <!-- search box -->
-        <div class="filter_input">
-            <label for="filter_search_box">Søk på arrangement</label>
-            <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
-        </div>
-
-        <!-- dropdown -->
-        <div class="filter_input">
-            <label for="county_select">Velg fylke</label>
-            <div class="custom_select_wrapper">
-                <select id="county_select">
-                    <option>All</option>
-                    <option>County 1</option>
-                    <option>County 2</option>
-                    <option>County 3</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- dropdown -->
-        <div class="filter_input">
-            <label for="county_select_two">Velg kommune</label>
-            <div class="custom_select_wrapper">
-                <select id="county_select_two">
-                    <option>All</option>
-                    <option>County 1</option>
-                    <option>County 2</option>
-                    <option>County 3</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- calender range selector -->
-        <div class="filter_input">
-            <label for="date_select">Dato</label>
-            <div class="custom_date_wrapper">
-                <input type="date" id="date_select" />
-            </div>
-            <div id="container" class="container" style="display: none">
-                <div class="container_top">
-                    <div class="container_title">Dato</div>
-                    <div class="close" onclick="closeContainer(event)" id="close-datepicker">
-                        <img src="./images/cross.svg" alt="Close" />
-                    </div>
-                </div>
-                <div class="container_content">
-                    <div id="calendar"></div>
-                </div>
-                <div style="margin-top: 32px; margin-bottom: 32px; border-bottom: 1px solid #003f57; width: 100%; opacity: 10%"></div>
-                <div class="container_footer">
-                    <div class="container_inner_footer">
-                        <button class="container_footer_btn" id="todayBtn">I dag</button>
-                        <button class="container_footer_btn" id="thisWeekendBtn">Denne helgen</button>
-                        <button class="container_footer_btn" id="nextWeekBtn">Neste uke</button>
-                        <button class="container_footer_btn" id="thisMonthBtn">Denne måned</button>
-                    </div>
-                    <button class="container_footer_btn_last">Vis</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- search button -->
-        <div>
-            <button class="top_search_btn">
-                Søk
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20.9984 20.9999L16.6484 16.6499" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-    </form>
-</div>
-
-<!-- Topbar -->
-<header class="header-map-view">
-    <!-- logo -->
-    <div>
-        <img src="./images/logo.svg" width="140" height="70" alt="Icon" />
-    </div>
-    <div>
-        <button class="menu_btn">
-            Meny
-            <img src="./images/menu.svg" alt="">
-        </button>
-    </div>
-    <form method="get" class="filter">
-        <!-- search box -->
-        <div class="filter_input">
-            <label for="filter_search_box">Søk på arrangement</label>
-            <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
-        </div>
-
-        <!-- dropdown -->
-        <div class="filter_input">
-            <label for="county_select">Velg fylke</label>
-            <div class="custom_select_wrapper">
-                <select id="county_select">
-                    <option>All</option>
-                    <option>County 1</option>
-                    <option>County 2</option>
-                    <option>County 3</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- dropdown -->
-        <div class="filter_input">
-            <label for="county_select_two">Velg kommune</label>
-            <div class="custom_select_wrapper">
-                <select id="county_select_two">
-                    <option>All</option>
-                    <option>County 1</option>
-                    <option>County 2</option>
-                    <option>County 3</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- calender range selector -->
-        <div class="filter_input">
-            <label for="date_select">Dato</label>
-            <div class="custom_date_wrapper">
-                <input type="date" id="date_select" />
-            </div>
-            <div id="container" class="container" style="display: none">
-                <div class="container_top">
-                    <div class="container_title">Dato</div>
-                    <div class="close" onclick="closeContainer(event)">
-                        <img src="./images/cross.svg" alt="Close" />
-                    </div>
-                </div>
-                <div class="container_content">
-                    <div id="calendar"></div>
-                </div>
-                <div
-                    style="margin-top: 32px; margin-bottom: 32px; border-bottom: 1px solid #003f57; width: 100%; opacity: 10%"></div>
-                <div class="container_footer">
-                    <div class="container_inner_footer">
-                        <button class="container_footer_btn" id="todayBtn">I dag</button>
-                        <button class="container_footer_btn" id="thisWeekendBtn">Denne helgen</button>
-                        <button class="container_footer_btn" id="nextWeekBtn">Neste uke</button>
-                        <button class="container_footer_btn" id="thisMonthBtn">Denne måned</button>
-                    </div>
-                    <button class="container_footer_btn_last">Vis</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- search button -->
-        <div>
-            <button class="top_search_btn">
-                Søk
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20.9984 20.9999L16.6484 16.6499" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-    </form>
-</header>
-
-<!-- Card and Map area -->
-<div class="divider_area_container">
-    <!-- Card area -->
-    <div class="divider_area_left">
-        <div class="divider_area_filter_section">
-            <div class="divider_area_filter_section_text">Viser <span>23</span> aktiviteter</div>
-            <button onclick="handleMove()" class="togglebtn"></button>
-            <button class="small_size">Vis i liste</button>
-        </div>
-        <div class="divider_area_left_grid_list">
+    <body class="main_container">
+        <!-- Topbar -->
+        <header class="header-map-view">
+            <!-- logo -->
             <div>
-                <a href="https://friluftslivetsuke.no/events/midnattsoltrappa"
-                   class="calendar-list-card is-text-color-midnight-blue">
-                    <div class="calendar-list-card__date bg--blue-200">
-                        <span class="day">01.</span>
-                        <span class="month">January</span>
-                    </div>
-                    <div class="calendar-list-card__info">
-                        <span class="calendar-list-card__info--title">Midnight sun stairs</span>
-                        <div class="calendar-list-card__info--place">
-                            <div>
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/pin.svg'-->
-                                    <g clip-path="url(#clip0_604_44988)">
-                                        <path
-                                            d="M21 10.3633C21 17.3633 12 23.3633 12 23.3633C12 23.3633 3 17.3633 3 10.3633C3 7.97633 3.94821 5.68715 5.63604 3.99932C7.32387 2.31149 9.61305 1.36328 12 1.36328C14.3869 1.36328 16.6761 2.31149 18.364 3.99932C20.0518 5.68715 21 7.97633 21 10.3633Z"
-                                            stroke="#3E2C20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M12 13.3633C13.6569 13.3633 15 12.0201 15 10.3633C15 8.70643 13.6569 7.36328 12 7.36328C10.3431 7.36328 9 8.70643 9 10.3633C9 12.0201 10.3431 13.3633 12 13.3633Z"
-                                            stroke="#3E2C20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_604_44988">
-                                            <rect width="24" height="24" fill="white"
-                                                  transform="translate(0 0.363281)"></rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                Spansdalen, Loabák/Lavangen
-                            </div>
-                            <div>
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/calendar.svg'-->
-                                    <path
-                                        d="M19 4.89795H5C3.89543 4.89795 3 5.79338 3 6.89795V20.8979C3 22.0025 3.89543 22.8979 5 22.8979H19C20.1046 22.8979 21 22.0025 21 20.8979V6.89795C21 5.79338 20.1046 4.89795 19 4.89795Z"
-                                        stroke="#082F42" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M16 2.89795V6.89795" stroke="#082F42" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M8 2.89795V6.89795" stroke="#082F42" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M3 10.8979H21" stroke="#082F42" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"></path>
-                                </svg>
-                                01 January 2024
-                            </div>
-                            <div>
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/clock.svg'-->
-                                    <path
-                                        d="M12 22.4297C17.5228 22.4297 22 17.9525 22 12.4297C22 6.90684 17.5228 2.42969 12 2.42969C6.47715 2.42969 2 6.90684 2 12.4297C2 17.9525 6.47715 22.4297 12 22.4297Z"
-                                        stroke="#3E2C20" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M12 6.42969V12.4297L16 14.4297" stroke="#083E58" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                                01:00 - 00:00
-                            </div>
-                        </div>
-                    </div>
-                    <div class="calendar-list-card__text">The midnight sun staircase is available to everyone, open all
-                        the time and free to use.
-                    </div>
-                    <div class="calendar-list-card__image is-max-height-full">
-                        <img src="https://norskfriluftsliv.no/images/_crop386x270/IMG_3951.jpg" alt="Icon"
-                             class="icon" />
-                        <div class="calendar-list-card__link bg--blue-200">
-                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg" class="icon">
-                                <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/arrow-right-nofill.svg'-->
-                                <rect x="1" y="11.106" width="10.2485" height="2.5" fill="#082F42"></rect>
-                                <path
-                                    d="M13.6238 3.6464L21.7635 11.7861C22.0782 12.1008 22.0782 12.6111 21.7635 12.9258L13.6238 21.0655C13.1161 21.5732 12.248 21.2136 12.248 20.4956L12.248 4.21627C12.248 3.49828 13.1161 3.13871 13.6238 3.6464Z"
-                                    stroke="#082F42" stroke-width="2"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
+                <img src="./images/logo.svg" width="140" height="70" alt="Icon" />
             </div>
             <div>
-                <a href="https://friluftslivetsuke.no/events/midnattsoltrappa"
-                   class="calendar-list-card is-text-color-midnight-blue">
-                    <div class="calendar-list-card__date bg--blue-200">
-                        <span class="day">01.</span>
-                        <span class="month">January</span>
+                <button class="menu_btn">
+                    Meny
+                    <img src="./images/menu.svg" alt="" />
+                </button>
+            </div>
+            <form method="get" class="filter">
+                <!-- search box -->
+                <div class="filter_input">
+                    <label for="filter_search_box">Søk på arrangement</label>
+                    <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
+                </div>
+
+                <!-- dropdown -->
+                <div class="filter_input">
+                    <label for="county_select">Velg fylke</label>
+                    <div class="custom_select_wrapper">
+                        <select id="county_select">
+                            <option>All</option>
+                            <option>County 1</option>
+                            <option>County 2</option>
+                            <option>County 3</option>
+                        </select>
                     </div>
-                    <div class="calendar-list-card__info">
-                        <span class="calendar-list-card__info--title">Midnight sun stairs</span>
-                        <div class="calendar-list-card__info--place">
-                            <div>
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/pin.svg'-->
-                                    <g clip-path="url(#clip0_604_44988)">
-                                        <path
-                                            d="M21 10.3633C21 17.3633 12 23.3633 12 23.3633C12 23.3633 3 17.3633 3 10.3633C3 7.97633 3.94821 5.68715 5.63604 3.99932C7.32387 2.31149 9.61305 1.36328 12 1.36328C14.3869 1.36328 16.6761 2.31149 18.364 3.99932C20.0518 5.68715 21 7.97633 21 10.3633Z"
-                                            stroke="#3E2C20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M12 13.3633C13.6569 13.3633 15 12.0201 15 10.3633C15 8.70643 13.6569 7.36328 12 7.36328C10.3431 7.36328 9 8.70643 9 10.3633C9 12.0201 10.3431 13.3633 12 13.3633Z"
-                                            stroke="#3E2C20" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_604_44988">
-                                            <rect width="24" height="24" fill="white"
-                                                  transform="translate(0 0.363281)"></rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                Spansdalen, Loabák/Lavangen
-                            </div>
-                            <div>
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/calendar.svg'-->
-                                    <path
-                                        d="M19 4.89795H5C3.89543 4.89795 3 5.79338 3 6.89795V20.8979C3 22.0025 3.89543 22.8979 5 22.8979H19C20.1046 22.8979 21 22.0025 21 20.8979V6.89795C21 5.79338 20.1046 4.89795 19 4.89795Z"
-                                        stroke="#082F42" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M16 2.89795V6.89795" stroke="#082F42" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M8 2.89795V6.89795" stroke="#082F42" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M3 10.8979H21" stroke="#082F42" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"></path>
-                                </svg>
-                                01 January 2024
-                            </div>
-                            <div>
-                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/clock.svg'-->
-                                    <path
-                                        d="M12 22.4297C17.5228 22.4297 22 17.9525 22 12.4297C22 6.90684 17.5228 2.42969 12 2.42969C6.47715 2.42969 2 6.90684 2 12.4297C2 17.9525 6.47715 22.4297 12 22.4297Z"
-                                        stroke="#3E2C20" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M12 6.42969V12.4297L16 14.4297" stroke="#083E58" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                                01:00 - 00:00
+                </div>
+
+                <!-- dropdown -->
+                <div class="filter_input">
+                    <label for="county_select_two">Velg kommune</label>
+                    <div class="custom_select_wrapper">
+                        <select id="county_select_two">
+                            <option>All</option>
+                            <option>County 1</option>
+                            <option>County 2</option>
+                            <option>County 3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter_input">
+                    <label for="date_select">Dato</label>
+                    <div class="custom_date_wrapper" id="date_select-trigger">
+                        <input type="date" id="date_select" />
+                    </div>
+                    <div id="datepicker" class="datepicker">
+                        <div class="datepicker_top">
+                            <div class="datepicker_title">Dato</div>
+                            <div class="close" id="close-datepicker">
+                                <img src="./images/cross.svg" alt="Close" />
                             </div>
                         </div>
-                    </div>
-                    <div class="calendar-list-card__text">The midnight sun staircase is available to everyone, open all
-                        the time and free to use.
-                    </div>
-                    <div class="calendar-list-card__image is-max-height-full">
-                        <img src="https://norskfriluftsliv.no/images/_crop386x270/IMG_3951.jpg" alt="Icon"
-                             class="icon" />
-                        <div class="calendar-list-card__link bg--blue-200">
-                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg" class="icon">
-                                <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/arrow-right-nofill.svg'-->
-                                <rect x="1" y="11.106" width="10.2485" height="2.5" fill="#082F42"></rect>
-                                <path
-                                    d="M13.6238 3.6464L21.7635 11.7861C22.0782 12.1008 22.0782 12.6111 21.7635 12.9258L13.6238 21.0655C13.1161 21.5732 12.248 21.2136 12.248 20.4956L12.248 4.21627C12.248 3.49828 13.1161 3.13871 13.6238 3.6464Z"
-                                    stroke="#082F42" stroke-width="2"></path>
-                            </svg>
+                        <div class="datepicker_content">
+                            <div id="calendar"></div>
+                        </div>
+                        <div style="margin-top: 32px; margin-bottom: 32px; border-bottom: 1px solid #003f57; width: 100%; opacity: 10%"></div>
+                        <div class="datepicker_footer">
+                            <div class="datepicker_inner_footer">
+                                <button class="datepicker_footer_btn" id="todayBtn">I dag</button>
+                                <button class="datepicker_footer_btn" id="thisWeekendBtn">Denne helgen</button>
+                                <button class="datepicker_footer_btn" id="nextWeekBtn">Neste uke</button>
+                                <button class="datepicker_footer_btn" id="thisMonthBtn">Denne måned</button>
+                            </div>
+                            <button class="datepicker_footer_btn_last">Vis</button>
                         </div>
                     </div>
-                </a>
+                </div>
+
+                <!-- search button -->
+                <div>
+                    <button class="top_search_btn">
+                        Søk
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.9984 20.9999L16.6484 16.6499" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </header>
+
+        <!-- Card and Map area -->
+        <div class="divider_area_container">
+            <!-- Card area -->
+            <div class="divider_area_left">
+                <div class="divider_area_filter_section">
+                    <div class="divider_area_filter_section_text">Viser <span>23</span> aktiviteter</div>
+                    <button onclick="handleMove()" class="togglebtn"></button>
+                    <button class="small_size">Vis i liste</button>
+                </div>
+                <div class="divider_area_left_grid_list">
+                    <div>
+                        <a href="https://friluftslivetsuke.no/events/midnattsoltrappa" class="calendar-list-card is-text-color-midnight-blue">
+                            <div class="calendar-list-card__date bg--blue-200">
+                                <span class="day">01.</span>
+                                <span class="month">January</span>
+                            </div>
+                            <div class="calendar-list-card__info">
+                                <span class="calendar-list-card__info--title">Midnight sun stairs</span>
+                                <div class="calendar-list-card__info--place">
+                                    <div>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/pin.svg'-->
+                                            <g clip-path="url(#clip0_604_44988)">
+                                                <path d="M21 10.3633C21 17.3633 12 23.3633 12 23.3633C12 23.3633 3 17.3633 3 10.3633C3 7.97633 3.94821 5.68715 5.63604 3.99932C7.32387 2.31149 9.61305 1.36328 12 1.36328C14.3869 1.36328 16.6761 2.31149 18.364 3.99932C20.0518 5.68715 21 7.97633 21 10.3633Z" stroke="#3E2C20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M12 13.3633C13.6569 13.3633 15 12.0201 15 10.3633C15 8.70643 13.6569 7.36328 12 7.36328C10.3431 7.36328 9 8.70643 9 10.3633C9 12.0201 10.3431 13.3633 12 13.3633Z" stroke="#3E2C20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_604_44988">
+                                                    <rect width="24" height="24" fill="white" transform="translate(0 0.363281)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Spansdalen, Loabák/Lavangen
+                                    </div>
+                                    <div>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/calendar.svg'-->
+                                            <path d="M19 4.89795H5C3.89543 4.89795 3 5.79338 3 6.89795V20.8979C3 22.0025 3.89543 22.8979 5 22.8979H19C20.1046 22.8979 21 22.0025 21 20.8979V6.89795C21 5.79338 20.1046 4.89795 19 4.89795Z" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16 2.89795V6.89795" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8 2.89795V6.89795" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M3 10.8979H21" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        01 January 2024
+                                    </div>
+                                    <div>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/clock.svg'-->
+                                            <path d="M12 22.4297C17.5228 22.4297 22 17.9525 22 12.4297C22 6.90684 17.5228 2.42969 12 2.42969C6.47715 2.42969 2 6.90684 2 12.4297C2 17.9525 6.47715 22.4297 12 22.4297Z" stroke="#3E2C20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12 6.42969V12.4297L16 14.4297" stroke="#083E58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        01:00 - 00:00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-list-card__text">The midnight sun staircase is available to everyone, open all the time and free to use.</div>
+                            <div class="calendar-list-card__image is-max-height-full">
+                                <img src="https://norskfriluftsliv.no/images/_crop386x270/IMG_3951.jpg" alt="Icon" class="icon" />
+                                <div class="calendar-list-card__link bg--blue-200">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/arrow-right-nofill.svg'-->
+                                        <rect x="1" y="11.106" width="10.2485" height="2.5" fill="#082F42"></rect>
+                                        <path d="M13.6238 3.6464L21.7635 11.7861C22.0782 12.1008 22.0782 12.6111 21.7635 12.9258L13.6238 21.0655C13.1161 21.5732 12.248 21.2136 12.248 20.4956L12.248 4.21627C12.248 3.49828 13.1161 3.13871 13.6238 3.6464Z" stroke="#082F42" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://friluftslivetsuke.no/events/midnattsoltrappa" class="calendar-list-card is-text-color-midnight-blue">
+                            <div class="calendar-list-card__date bg--blue-200">
+                                <span class="day">01.</span>
+                                <span class="month">January</span>
+                            </div>
+                            <div class="calendar-list-card__info">
+                                <span class="calendar-list-card__info--title">Midnight sun stairs</span>
+                                <div class="calendar-list-card__info--place">
+                                    <div>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/pin.svg'-->
+                                            <g clip-path="url(#clip0_604_44988)">
+                                                <path d="M21 10.3633C21 17.3633 12 23.3633 12 23.3633C12 23.3633 3 17.3633 3 10.3633C3 7.97633 3.94821 5.68715 5.63604 3.99932C7.32387 2.31149 9.61305 1.36328 12 1.36328C14.3869 1.36328 16.6761 2.31149 18.364 3.99932C20.0518 5.68715 21 7.97633 21 10.3633Z" stroke="#3E2C20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M12 13.3633C13.6569 13.3633 15 12.0201 15 10.3633C15 8.70643 13.6569 7.36328 12 7.36328C10.3431 7.36328 9 8.70643 9 10.3633C9 12.0201 10.3431 13.3633 12 13.3633Z" stroke="#3E2C20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_604_44988">
+                                                    <rect width="24" height="24" fill="white" transform="translate(0 0.363281)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Spansdalen, Loabák/Lavangen
+                                    </div>
+                                    <div>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/calendar.svg'-->
+                                            <path d="M19 4.89795H5C3.89543 4.89795 3 5.79338 3 6.89795V20.8979C3 22.0025 3.89543 22.8979 5 22.8979H19C20.1046 22.8979 21 22.0025 21 20.8979V6.89795C21 5.79338 20.1046 4.89795 19 4.89795Z" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16 2.89795V6.89795" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8 2.89795V6.89795" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M3 10.8979H21" stroke="#082F42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        01 January 2024
+                                    </div>
+                                    <div>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/clock.svg'-->
+                                            <path d="M12 22.4297C17.5228 22.4297 22 17.9525 22 12.4297C22 6.90684 17.5228 2.42969 12 2.42969C6.47715 2.42969 2 6.90684 2 12.4297C2 17.9525 6.47715 22.4297 12 22.4297Z" stroke="#3E2C20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M12 6.42969V12.4297L16 14.4297" stroke="#083E58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        01:00 - 00:00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-list-card__text">The midnight sun staircase is available to everyone, open all the time and free to use.</div>
+                            <div class="calendar-list-card__image is-max-height-full">
+                                <img src="https://norskfriluftsliv.no/images/_crop386x270/IMG_3951.jpg" alt="Icon" class="icon" />
+                                <div class="calendar-list-card__link bg--blue-200">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <!--SVG injected from 'https://friluftslivetsuke.no/dist/images/icons/arrow-right-nofill.svg'-->
+                                        <rect x="1" y="11.106" width="10.2485" height="2.5" fill="#082F42"></rect>
+                                        <path d="M13.6238 3.6464L21.7635 11.7861C22.0782 12.1008 22.0782 12.6111 21.7635 12.9258L13.6238 21.0655C13.1161 21.5732 12.248 21.2136 12.248 20.4956L12.248 4.21627C12.248 3.49828 13.1161 3.13871 13.6238 3.6464Z" stroke="#082F42" stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="divider_area_left_grid"></div>
+            </div>
+            <!-- Map area -->
+            <div class="divider_area_right">
+                <div id="map"></div>
             </div>
         </div>
-        <div class="divider_area_left_grid">
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
-                    </div>
-                </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
+        <!-- Sidebar filter -->
+        <div class="sidebar">
+            <div class="sidebar_hearder">
+                <div>Filter</div>
+                <div>
+                    <button class="close_btn">
+                        <img src="./images/sidebarCross.svg" alt="" />
+                    </button>
                 </div>
             </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
+            <form method="get" class="sidebar_filter">
+                <!-- search box -->
+                <div class="filter_input">
+                    <label for="filter_search_box">Søk på arrangement</label>
+                    <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
+                </div>
+
+                <!-- dropdown -->
+                <div class="filter_input">
+                    <label for="county_select">Velg fylke</label>
+                    <div class="custom_select_wrapper">
+                        <select id="county_select">
+                            <option>All</option>
+                            <option>County 1</option>
+                            <option>County 2</option>
+                            <option>County 3</option>
+                        </select>
                     </div>
                 </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
+
+                <!-- dropdown -->
+                <div class="filter_input">
+                    <label for="county_select_two">Velg kommune</label>
+                    <div class="custom_select_wrapper">
+                        <select id="county_select_two">
+                            <option>All</option>
+                            <option>County 1</option>
+                            <option>County 2</option>
+                            <option>County 3</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
+
+                <div class="filter_input">
+                    <label for="date_select">Dato</label>
+                    <div class="custom_date_wrapper" id="date_select-trigger">
+                        <input type="date" id="date_select" />
                     </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
+                    <div id="datepicker" class="datepicker">
+                        <div class="datepicker_top">
+                            <div class="datepicker_title">Dato</div>
+                            <div class="close" id="close-datepicker">
+                                <img src="./images/cross.svg" alt="Close" />
+                            </div>
+                        </div>
+                        <div class="datepicker_content">
+                            <div id="calendar"></div>
+                        </div>
+                        <div style="margin-top: 32px; margin-bottom: 32px; border-bottom: 1px solid #003f57; width: 100%; opacity: 10%"></div>
+                        <div class="datepicker_footer">
+                            <div class="datepicker_inner_footer">
+                                <button class="datepicker_footer_btn" id="todayBtn">I dag</button>
+                                <button class="datepicker_footer_btn" id="thisWeekendBtn">Denne helgen</button>
+                                <button class="datepicker_footer_btn" id="nextWeekBtn">Neste uke</button>
+                                <button class="datepicker_footer_btn" id="thisMonthBtn">Denne måned</button>
+                            </div>
+                            <button class="datepicker_footer_btn_last">Vis</button>
+                        </div>
                     </div>
                 </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
+
+                <!-- search button -->
+                <div>
+                    <button class="top_search_btn">
+                        Søk
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.9984 20.9999L16.6484 16.6499" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
-                    </div>
-                </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
-                    </div>
-                </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
-                    </div>
-                </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
-                    </div>
-                </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card_container">
-                <div class="card_container_img_area">
-                    <div class="card_container_inner_img_area">
-                        <img src="./images/image 27.png" alt="" />
-                    </div>
-                    <div class="card_container_inner_img_area_icon">
-                        <img src="./images/arrow.svg" alt="" height="17.33" width="17.33" />
-                    </div>
-                </div>
-                <div class="card_container_text_area">
-                    <div class="card_conatiner_title">BC Uskedalen</div>
-                    <div class="card_conatiner_desc card_conatiner_desc_one">
-                        <div>
-                            <img src="./images/location.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Uskedalen</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/calender.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">18. jan. 2025</div>
-                    </div>
-                    <div class="card_conatiner_desc">
-                        <div>
-                            <img src="./images/time.svg" alt="" height="16" width="16" />
-                        </div>
-                        <div class="card_conatiner_text">Kl. 07.00 - 23.59</div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
-    </div>
-    <!-- Map area -->
-    <div class="divider_area_right">
-        <div id="map"></div>
-    </div>
-</div>
-<!-- Calender -->
-<script src="js/vanilla-calendar.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/date-range-picker.js"></script>
-<!-- Google Maps API script with callback -->
-<script src="js/leaflet.js"></script>
-<script src="js/map.js"></script>
-<script src="js/siderbar.js"></script>
-</body>
+        <!-- Google Maps API script with callback -->
+        <script src="js/leaflet.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/siderbar.js"></script>
+        <!-- Calender -->
+        <script src="js/vanilla-calendar.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/date-range-picker.js"></script>
+        <!--new scripts getonnet-->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
+        <script src="./js/layout-switcher.js"></script>
+        <script src="./js/card-view.js"></script>
+    </body>
 </html>
