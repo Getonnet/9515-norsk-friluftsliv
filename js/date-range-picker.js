@@ -1,4 +1,3 @@
-// inside calender functionality
 document.addEventListener("DOMContentLoaded", function () {
     const options = {
         type: "multiple",
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        console.log(dates); // Debug log for passed dates
+        // console.log(dates); // Debug log for passed dates
 
         // Ensure the `dates` are in ISO string format without time
         const formattedDates = dates.map((date) => date.toISOString().split("T")[0]);
@@ -49,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (typeof calendar.onSelect === "function") {
             calendar.onSelect(calendar.settings.selected.dates);
         }
+        document.getElementById("selectedDates").dataset.dates = JSON.stringify(formattedDates);
     }
 
     const todayBtn = document.getElementById("todayBtn");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     thisMonthBtn.addEventListener("click", (e) => {
-        e.preventDefault();s
+        e.preventDefault();
         const today = new Date();
         const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
         const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);

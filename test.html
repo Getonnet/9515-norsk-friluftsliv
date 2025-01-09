@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Query Parameter Form</title>
+    </head>
+    <body>
+        <h1>Search API</h1>
+        <form id="queryForm">
+            <label for="queryInput">Enter your query:</label>
+            <input type="text" id="queryInput" name="query" required />
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+        <script>
+            // script.js
+            document.getElementById("queryForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form from submitting normally
+
+                const queryInput = document.getElementById("queryInput").value; // Get input value
+                const apiUrl = `https://api.example.com/search?query=${encodeURIComponent(queryInput)}`; // Construct API URL
+                console.log(apiUrl); // Log API URL
+
+                // Make the API request
+                fetch(apiUrl)
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error(`API error: ${response.status}`);
+                        }
+                        return response.json(); // Parse JSON response
+                    })
+                    .then((data) => {
+                        const resultDiv = document.getElementById("result");
+                        resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`; // Display result
+                    })
+                    .catch((error) => {
+                        const resultDiv = document.getElementById("result");
+                        resultDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`; // Display error
+                    });
+            });
+        </script>
+    </body>
+</html>

@@ -57,6 +57,10 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
+        <!-- select -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
         <!-- map -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" />
@@ -95,37 +99,29 @@
                     <img src="./images/menu.svg" alt="" />
                 </button>
             </div>
-            <form method="get" class="filter">
+            <!-- In your HTML file -->
+            <div id="selectedDates" data-dates="" hidden></div>
+
+            <form method="get" id="form" class="filter">
                 <!-- search box -->
                 <div class="filter_input">
                     <label for="filter_search_box">Søk på arrangement</label>
-                    <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
+                    <input type="text" id="title" placeholder="Hele norge båler" />
                 </div>
-
                 <!-- dropdown -->
                 <div class="filter_input">
                     <label for="county_select">Velg fylke</label>
-                    <div class="custom_select_wrapper">
-                        <select id="county_select">
-                            <option>All</option>
-                            <option>County 1</option>
-                            <option>County 2</option>
-                            <option>County 3</option>
-                        </select>
-                    </div>
+                    <select id="selectOne">
+                        <option value="">Select</option>
+                    </select>
                 </div>
 
                 <!-- dropdown -->
                 <div class="filter_input">
                     <label for="county_select_two">Velg kommune</label>
-                    <div class="custom_select_wrapper">
-                        <select id="county_select_two">
-                            <option>All</option>
-                            <option>County 1</option>
-                            <option>County 2</option>
-                            <option>County 3</option>
-                        </select>
-                    </div>
+                    <select id="selectTwo">
+                        <option value="">Select</option>
+                    </select>
                 </div>
 
                 <div class="filter_input">
@@ -151,14 +147,14 @@
                                 <button class="datepicker_footer_btn" id="nextWeekBtn">Neste uke</button>
                                 <button class="datepicker_footer_btn" id="thisMonthBtn">Denne måned</button>
                             </div>
-                            <button class="datepicker_footer_btn_last">Vis</button>
+                            <button id="dateSubmitBtn" class="datepicker_footer_btn_last">Vis</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- search button -->
                 <div>
-                    <button class="top_search_btn">
+                    <button id="searchBtn" type="submit" class="top_search_btn">
                         Søk
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -174,7 +170,7 @@
             <!-- Card area -->
             <div class="divider_area_left">
                 <div class="divider_area_filter_section">
-                    <div class="divider_area_filter_section_text">Viser <span>23</span> aktiviteter</div>
+                    <div class="divider_area_filter_section_text">Viser <span id="totalResult">0</span> aktiviteter</div>
                     <button onclick="handleMove()" class="togglebtn"></button>
                     <button class="small_size">Vis i liste</button>
                 </div>
@@ -311,13 +307,12 @@
                     </button>
                 </div>
             </div>
-            <form method="get" class="sidebar_filter">
+            <form method="get" id="form" class="sidebar_filter">
                 <!-- search box -->
                 <div class="filter_input">
                     <label for="filter_search_box">Søk på arrangement</label>
-                    <input type="text" name="filter_search_box" id="filter_search_box" placeholder="Hele norge båler" />
+                    <input type="text" id="title" placeholder="Hele norge båler" />
                 </div>
-
                 <!-- dropdown -->
                 <div class="filter_input">
                     <label for="county_select">Velg fylke</label>
@@ -386,16 +381,16 @@
         </div>
         <!-- Google Maps API script with callback -->
         <script src="js/leaflet.js"></script>
-        <script src="js/map.js"></script>
         <script src="js/siderbar.js"></script>
         <!-- Calender -->
         <script src="js/vanilla-calendar.min.js"></script>
         <script src="js/popper.min.js"></script>
-        <script src="js/date-range-picker.js"></script>
+        <script src="js/date-range-picker.js" type="module"></script>
         <!--new scripts getonnet-->
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
         <script src="./js/layout-switcher.js"></script>
         <script src="./js/card-view.js"></script>
+        <script src="./js/filter.js"></script>
     </body>
 </html>
